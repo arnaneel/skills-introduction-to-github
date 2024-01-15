@@ -12,6 +12,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
            name: my-artifact
-      - run: ls -R
+      - name: Display structure of downloaded files
       - run: npm install -g bats
       - run: bats -v
+      - run: ls -R
